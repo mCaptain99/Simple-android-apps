@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingLeft="16dp"
+              android:paddingRight="16dp"
+              android:orientation="vertical"
+              tools:context=".Game5x5Activity">
+    <TextView
+            android:text="Score Board"
+            android:textSize="26dp"
+            android:layout_width="match_parent"
+            android:layout_height="43dp" android:id="@+id/textView" android:textAlignment="center"
+            android:gravity="clip_horizontal|clip_vertical|center_horizontal|center_vertical"
+            android:layout_marginBottom="30px"/>
+    <TableLayout
+            android:layout_width="382dp"
+            android:layout_height="wrap_content">
+
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="35dp" android:gravity="center">
+            <TextView android:text="Points X" android:textSize="26dp"
+                      android:layout_marginRight="100px"/>
+            <TextView android:text="Points O" android:textSize="26dp"
+                      android:layout_marginLeft="100px"/>
+        </TableRow>
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="46dp" android:gravity="center">
+            <TextView android:text="0" android:textSize="26dp"  android:id="@+id/pointsXVal"
+                      android:layout_marginRight="100px"/>
+            <TextView android:text="0" android:textSize="26dp"
+                      android:id="@+id/pointsOVal" android:layout_marginLeft="100px"/>
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+            android:id="@+id/board"
+            android:layout_width="match_parent"
+            android:layout_height="315dp" android:layout_marginTop="100px">
+
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="35dp" android:gravity="center">
+            <Button android:id="@+id/btn00" android:layout_width="150px" android:layout_height="150px"
+                    android:tag="00" android:onClick="handleClick"></Button>
+            <Button android:id="@+id/btn01" android:layout_width="150px" android:layout_height="150px"
+                    android:tag="01" android:onClick="handleClick"></Button>
+            <Button android:id="@+id/btn02" android:layout_width="150px" android:layout_height="150px"
+                    android:tag="02" android:onClick="handleClick"></Button>
+            <Button android:id="@+id/btn03" android:layout_width="150px" android:layout_height="150px"
+                    android:tag="03" android:onClick="handleClick"></Button>
+            <Button android:id="@+id/btn04" android:layout_width="150px" android:layout_height="150px"
+                    android:tag="04" android:onClick="handleClick"></Button>
+        </TableRow>
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="35dp" android:gravity="center">
+            <Button android:id="@+id/btn10" android:layout_width="150px" android:layout_height="150px"
+                    android:tag="10" android:onClick="handleClick"></Button>
+            <Button android:id="@+id/btn11" android:layout_width="150px" android:layout_height="150px"
+                    android:tag="11" android:onClick="handleClick"></Button>
+            <Button android:id="@+id/btn12" android:layout_width="150px" android:layout_height="150px"
+                    android:tag="12" android:onClick="handleClick"></Button>
+            <Button android:id="@+id/btn13" android:layout_width="150px" android:layout_height="150px"
+                    android:tag="13" android:onClick="handleClick"></Button>
+            <Button android:id="@+id/btn14" android:layout_width="150px" android:layout_height="150px"
+                    android:tag="14" android:onClick="handleClick"></Button>
+        </TableRow>
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="35dp" android:gravity="center">
+            <Button android:id="@+id/btn20" android:layout_width="150px" android:layout_height="150px"
+                    android:tag="20" android:onClick="handleClick"></Button>
+            <Button android:id="@+id/btn21" android:layout_width="150px" android:layout_height="150px"
+                    android:tag="21" android:onClick="handleClick"></Button>
+            <Button android:id="@+id/btn22" android:layout_width="150px" android:layout_height="150px"
+                    android:tag="22" android:onClick="handleClick"></Button>
+            <Button android:id="@+id/btn23" android:layout_width="150px" android:layout_height="150px"
+                    android:tag="23" android:onClick="handleClick"></Button>
+            <Button android:id="@+id/btn24" android:layout_width="150px" android:layout_height="150px"
+                    android:tag="24" android:onClick="handleClick"></Button>
+        </TableRow>
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="35dp" android:gravity="center">
+            <Button android:id="@+id/btn30" android:layout_width="150px" android:layout_height="150px"
+                    android:tag="30" android:onClick="handleClick"></Button>
+            <Button android:id="@+id/btn31" android:layout_width="150px" android:layout_height="150px"
+                    android:tag="31" android:onClick="handleClick"></Button>
+            <Button android:id="@+id/btn32" android:layout_width="150px" android:layout_height="150px"
+                    android:tag="32" android:onClick="handleClick"></Button>
+            <Button android:id="@+id/btn33" android:layout_width="150px" android:layout_height="150px"
+                    android:tag="33" android:onClick="handleClick"></Button>
+            <Button android:id="@+id/btn34" android:layout_width="150px" android:layout_height="150px"
+                    android:tag="34" android:onClick="handleClick"></Button>
+        </TableRow>
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="35dp" android:gravity="center">
+            <Button android:id="@+id/btn40" android:layout_width="150px" android:layout_height="150px"
+                    android:tag="40" android:onClick="handleClick"></Button>
+            <Button android:id="@+id/btn41" android:layout_width="150px" android:layout_height="150px"
+                    android:tag="41" android:onClick="handleClick"></Button>
+            <Button android:id="@+id/btn42" android:layout_width="150px" android:layout_height="150px"
+                    android:tag="42" android:onClick="handleClick"></Button>
+            <Button android:id="@+id/btn43" android:layout_width="150px" android:layout_height="150px"
+                    android:tag="43" android:onClick="handleClick"></Button>
+            <Button android:id="@+id/btn44" android:layout_width="150px" android:layout_height="150px"
+                    android:tag="44" android:onClick="handleClick"></Button>
+        </TableRow>
+    </TableLayout>
+    <Button
+            android:text="Return"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/goToMenu"
+            android:onClick="goToMenu"/>
+
+
+</LinearLayout>
