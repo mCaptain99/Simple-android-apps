@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingLeft="16dp"
+              android:paddingRight="16dp"
+              android:orientation="vertical"
+              tools:context=".MainActivity" android:textAlignment="center">
+    <TextView
+            android:id="@+id/gameName"
+            android:layout_width="132dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Hangman"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/textToGuess"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.265"
+            android:layout_marginTop="28dp" android:textAlignment="center" android:layout_marginBottom="15dp"/>
+    <TextView
+            android:id="@+id/textToGuess"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:text="********"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.145" android:layout_marginBottom="15dp"/>
+    <ImageView
+            android:layout_width="274dp"
+            android:layout_height="151dp"
+            android:layout_gravity="center"
+            android:src="@drawable/hangman0"
+            android:id="@+id/imageView" tools:layout_editor_absoluteY="172dp" tools:layout_editor_absoluteX="102dp"
+            android:layout_marginBottom="15dp"/>
+
+    <TableLayout android:layout_gravity="center" android:id="@+id/table"
+                 android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TableRow android:layout_gravity="center">
+        <Button
+                android:text="A"
+                android:layout_width="37dp"
+                android:textSize="15sp"
+                android:layout_height="37dp" android:id="@+id/btnA"
+                android:onClick="onLetterSubmit"
+                android:tag="A"/>
+
+
+        <Button
+                android:text="B"
+                android:onClick="onLetterSubmit"
+                android:layout_width="37dp"
+                android:textSize="15sp"
+                android:layout_height="37dp" android:id="@+id/btnB"
+                android:tag="B"/>
+
+
+        <Button
+                android:text="C"
+                android:onClick="onLetterSubmit"
+                android:layout_width="37dp"
+                android:textSize="15sp"
+                android:layout_height="37dp" android:id="@+id/btnC"
+                android:tag="C"/>
+
+
+        <Button
+                android:text="D"
+                android:onClick="onLetterSubmit"
+                android:layout_width="37dp"
+                android:textSize="15sp"
+                android:layout_height="37dp" android:id="@+id/btnD"
+                android:tag="D"/>
+
+
+        <Button
+                android:text="E"
+                android:onClick="onLetterSubmit"
+                android:layout_width="37dp"
+                android:textSize="15sp"
+                android:layout_height="37dp" android:id="@+id/btnE"
+                android:tag="E"/>
+
+
+        <Button
+                android:text="F"
+                android:onClick="onLetterSubmit"
+                android:layout_width="37dp"
+                android:textSize="15sp"
+                android:layout_height="37dp" android:id="@+id/btnF"
+                android:tag="F"/>
+
+
+        <Button
+                android:text="G"
+                android:onClick="onLetterSubmit"
+                android:layout_width="37dp"
+                android:textSize="15sp"
+                android:layout_height="37dp" android:id="@+id/btnG"
+                android:tag="G"/>
+
+
+        <Button
+                android:text="H"
+                android:onClick="onLetterSubmit"
+                android:layout_width="37dp"
+                android:textSize="15sp"
+                android:layout_height="37dp" android:id="@+id/btnH"
+                android:tag="H"/>
+
+
+        <Button
+                android:text="I"
+                android:onClick="onLetterSubmit"
+                android:layout_width="37dp"
+                android:textSize="15sp"
+                android:layout_height="37dp" android:id="@+id/btnI"
+                android:tag="I"/>
+        </TableRow>
+    <TableRow android:layout_gravity="center">
+
+        <Button
+                android:text="J"
+                android:onClick="onLetterSubmit"
+                android:layout_width="37dp"
+                android:textSize="15sp"
+                android:layout_height="37dp" android:id="@+id/btnJ"
+                android:tag="J"/>
+
+        <Button
+                android:text="K"
+                android:onClick="onLetterSubmit"
+                android:layout_width="37dp"
+                android:textSize="15sp"
+                android:layout_height="37dp" android:id="@+id/btnK"
+                android:tag="K"/>
+
+
+        <Button
+                android:text="L"
+                android:onClick="onLetterSubmit"
+                android:layout_width="37dp"
+                android:textSize="15sp"
+                android:layout_height="37dp" android:id="@+id/btnL"
+                android:tag="L"/>
+
+
+        <Button
+                android:text="M"
+                android:onClick="onLetterSubmit"
+                android:layout_width="37dp"
+                android:textSize="15sp"
+                android:layout_height="37dp" android:id="@+id/btnM"
+                android:tag="M"/>
+
+
+        <Button
+                android:text="N"
+                android:onClick="onLetterSubmit"
+                android:layout_width="37dp"
+                android:textSize="15sp"
+                android:layout_height="37dp" android:id="@+id/btnN"
+                android:tag="N"/>
+
+
+        <Button
+                android:text="O"
+                android:onClick="onLetterSubmit"
+                android:layout_width="37dp"
+                android:textSize="15sp"
+                android:layout_height="37dp" android:id="@+id/btnO"
+                android:tag="O"/>
+
+
+        <Button
+                android:text="P"
+                android:onClick="onLetterSubmit"
+                android:layout_width="37dp"
+                android:textSize="15sp"
+                android:layout_height="37dp" android:id="@+id/btnP"
+                android:tag="P"/>
+
+
+        <Button
+                android:text="Q"
+                android:onClick="onLetterSubmit"
+                android:layout_width="37dp"
+                android:textSize="15sp"
+                android:layout_height="37dp" android:id="@+id/btnQ"
+                android:tag="Q"/>
+
+
+        <Button
+                android:text="R"
+                android:onClick="onLetterSubmit"
+                android:layout_width="37dp"
+                android:textSize="15sp"
+                android:layout_height="37dp" android:id="@+id/btnR"
+                android:tag="R"/>
+    </TableRow>
+    <TableRow android:layout_gravity="center">
+
+        <Button
+                android:text="S"
+                android:onClick="onLetterSubmit"
+                android:layout_width="37dp"
+                android:textSize="15sp"
+                android:layout_height="37dp" android:id="@+id/btnS"
+                android:tag="S"/>
+
+
+        <Button
+                android:text="T"
+                android:onClick="onLetterSubmit"
+                android:layout_width="37dp"
+                android:textSize="15sp"
+                android:layout_height="37dp" android:id="@+id/btnT"
+                android:tag="T"/>
+        <Button
+                android:text="U"
+                android:onClick="onLetterSubmit"
+                android:layout_width="37dp"
+                android:textSize="15sp"
+                android:layout_height="37dp" android:id="@+id/btnU"
+                android:tag="U"/>
+
+
+        <Button
+                android:text="V"
+                android:onClick="onLetterSubmit"
+                android:layout_width="37dp"
+                android:textSize="15sp"
+                android:layout_height="37dp" android:id="@+id/btnV"
+                android:tag="V"/>
+
+
+        <Button
+                android:text="W"
+                android:onClick="onLetterSubmit"
+                android:layout_width="37dp"
+                android:textSize="15sp"
+                android:layout_height="37dp" android:id="@+id/btnW"
+                android:tag="W"/>
+
+
+        <Button
+                android:text="X"
+                android:onClick="onLetterSubmit"
+                android:layout_width="37dp"
+                android:textSize="15sp"
+                android:layout_height="37dp" android:id="@+id/btnX"
+                android:tag="X"/>
+
+
+        <Button
+                android:text="Y"
+                android:onClick="onLetterSubmit"
+                android:layout_width="37dp"
+                android:textSize="15sp"
+                android:layout_height="37dp" android:id="@+id/btnY"
+                android:tag="Y"/>
+
+
+        <Button
+                android:text="Z"
+                android:onClick="onLetterSubmit"
+                android:layout_width="37dp"
+                android:textSize="15sp"
+                android:layout_height="37dp" android:id="@+id/btnZ"
+                android:tag="Z"/>
+    </TableRow>
+    </TableLayout>
+
+    <EditText
+            android:id="@+id/guessPasswordInput"
+            android:layout_gravity="center"
+            android:layout_width="411dp"
+            android:layout_height="42dp"
+            android:text=""
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.826" app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="15dp"/>
+    <Button
+            android:text="Guess Password"
+            android:layout_gravity="center"
+            android:layout_width="130dp"
+            android:layout_height="41dp" android:id="@+id/guessPasswordBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="onPasswordSubmit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.92"
+            android:layout_marginBottom="15dp"/>
+</LinearLayout>

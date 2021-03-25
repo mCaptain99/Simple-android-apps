@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">hangman_kotlin</string>
+    <string-array name="words_array">
+        <item>integral</item>
+        <item>derivative</item>
+        <item>arithmetic sequence</item>
+        <item>identity matrix</item>
+        <item>exponential function</item>
+        <item>natural logarithm</item>
+        <item>parallel lines</item>
+        <item>even number</item>
+        <item>relatively prime</item>
+        <item>square matrix</item>
+        <item>determinant</item>
+        <item>discriminant</item>
+        <item>the riemann hypothesis</item>
+        <item>the harnack inequality</item>
+        <item>parallelogram</item>
+        <item>orthogonal projection</item>
+        <item>equilateral triangle</item>
+        <item>coordinate</item>
+        <item>quadratic form</item>
+        <item>lemma</item>
+        <item>jacobian matrix</item>
+    </string-array>
+</resources>
