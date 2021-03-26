@@ -1,7 +1,11 @@
 package com.example.tictactoe
 
+import java.util.*
+
+
 abstract class GameLogic {
     open var tour = "X"
+    open var tours = listOf("X", "O")
 
     open var fields = mutableMapOf("00" to "")
 
@@ -25,6 +29,9 @@ abstract class GameLogic {
     abstract fun checkWin(): Boolean
 
     fun cleanBoard(){
+        var random = Random()
+        var next: Int = random.nextInt(2)
+        tour = tours[next]
         for(field in fields){
             fields[field.key] = ""
         }
