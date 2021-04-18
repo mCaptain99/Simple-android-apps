@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+tools:context=".MainActivity">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:orientation="vertical">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:text="Sort By: " android:gravity="center"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:gravity="center" android:id="@+id/sortSelect">
+
+            <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:id="@+id/btnSortByDate" android:text="  Date  "
+                    android:gravity="center" android:textAlignment="gravity"
+                    android:onClick="sortByDate"
+                    android:tag="sort1"/>
+
+            <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:id="@+id/btnSortByPriority" android:text="Priority"
+                    android:gravity="center" android:textAlignment="gravity"
+                    android:onClick="sortByPriority"
+                    android:tag="sort2"/>
+
+            <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:id="@+id/btnSortByType" android:text="  Type  "
+                    android:onClick="sortByType"
+                    android:gravity="center" android:textAlignment="gravity"
+                    android:tag="sort3"/>
+        </LinearLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:text="Show only: " android:gravity="center"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:gravity="center" android:id="@+id/filterSelect">
+
+            <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:id="@+id/btnShowAll" android:text="  All   "
+                    android:gravity="center" android:textAlignment="gravity"
+                    android:onClick="showAll"/>
+
+            <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:id="@+id/btnShowOnlyToday" android:text=" Today  "
+                    android:gravity="center" android:textAlignment="gravity"
+                    android:onClick="showOnlyToday"/>
+
+            <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:id="@+id/btnShowOnlyTomorrow" android:text="Tomorrow"
+                    android:onClick="showOnlyTomorrow"
+                    android:gravity="center" android:textAlignment="gravity"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/task_list"
+                tools:context=".MainActivity">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+    <Button android:id="@+id/btn_add"
+            android:onClick="addTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add new Task"></Button>
+    </LinearLayout>
+</ScrollView>

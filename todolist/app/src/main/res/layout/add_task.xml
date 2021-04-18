@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" xmlns:tools="http://schemas.android.com/tools"
+            tools:context=".AddTaskActivity">
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical" android:gravity="center">
+        <TextView
+                android:text="Add new task"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" android:id="@+id/header" android:gravity="center"
+                android:background="#88FFC107" android:textSize="24sp"/>
+        <TextView
+                android:text="description:"
+                android:layout_width="match_parent"
+                android:layout_height="32dp" android:id="@+id/textView3" android:gravity="center"
+                android:background="#36FFC107" android:textSize="18sp"/>
+        <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:gravity="center" android:id="@+id/description_input"/>
+        <TextView
+                android:text="date:"
+                android:layout_width="match_parent"
+                android:layout_height="32dp" android:id="@+id/textView4" android:gravity="center"
+                android:background="#36FFC107" android:textSize="18sp"/>
+        <TextView
+                android:id="@+id/editDatePicker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="showDatePicker"
+                android:text="________"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:text="Hours:" android:gravity="center"
+                          android:background="#36FFC107" android:textSize="18sp"/>
+        <TextView
+                android:id="@+id/editTimePicker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="showTimePicker"
+                android:text="________"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:text="Time :" android:gravity="center"
+                  android:background="#36FFC107" android:textSize="18sp"/>
+        <EditText
+                android:id="@+id/timeInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="showTimePicker"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:inputType="number"/>
+
+        <TextView
+                        android:text="Priority:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/textView6"
+                        android:background="#36FFC107" android:textSize="18sp"
+                        android:gravity="center"/>
+                <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:id="@+id/priority_picker">
+                    <RadioButton
+                            android:text="Low       "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:id="@+id/radio_low"/>
+                    <RadioButton
+                            android:text="Middle    "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:id="@+id/radio_middle"
+                            android:layout_weight="1"/>
+                    <RadioButton
+                            android:text="High      "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:id="@+id/radio_high"
+                            android:layout_weight="1"/>
+                </RadioGroup>
+
+        <TextView android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:text="Type of task:" android:gravity="center" android:background="#36FFC107"
+                  android:textSize="18sp"/>
+        <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:id="@+id/select_type_table">
+            <TableRow android:gravity="center">
+                <LinearLayout android:layout_height="wrap_content" android:layout_width="wrap_content"
+                              android:orientation="vertical">
+                    <ImageButton android:src="@drawable/food" android:layout_width="110dp"
+                                 android:layout_height="110dp" android:scaleType="fitXY"
+                                 android:layout_weight="1" android:onClick="selectType"
+                                 android:tag="1" android:id="@+id/btn1" android:background="@color/white"
+                                 android:layout_margin="3dp" style="@android:style/Widget.ImageButton"
+                                 android:tint="#00FFFFFF"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:text="food" android:layout_gravity="center"/>
+                </LinearLayout>
+                <LinearLayout android:layout_height="wrap_content" android:layout_width="wrap_content"
+                              android:orientation="vertical" >
+                    <ImageButton android:src="@drawable/meeting" android:layout_width="110dp"
+                                 android:layout_height="110dp" android:scaleType="fitXY"
+                                 android:layout_weight="1" android:onClick="selectType"
+                                 android:tag="2"  android:layout_margin="3dp" android:id="@+id/btn2"
+                                 android:background="@color/white"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:text="meeting" android:layout_gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_height="wrap_content" android:layout_width="wrap_content"
+                              android:orientation="vertical">
+                    <ImageButton android:src="@drawable/learning" android:layout_width="110dp"
+                                 android:layout_height="110dp" android:scaleType="fitXY"
+                                 android:layout_weight="1" android:onClick="selectType"
+                                 android:tag="3" android:id="@+id/btn3" android:background="@color/white"
+                                 android:layout_margin="3dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:text="learning" android:layout_gravity="center"/>
+                </LinearLayout>
+            </TableRow>
+            <TableRow android:gravity="center">
+                <LinearLayout android:layout_height="wrap_content" android:layout_width="wrap_content"
+                              android:orientation="vertical">
+                    <ImageButton android:src="@drawable/home" android:layout_width="110dp"
+                                 android:layout_height="110dp" android:scaleType="fitXY"
+                                 android:layout_weight="1" android:onClick="selectType"
+                                 android:tag="4" android:layout_margin="3dp" android:id="@+id/btn4"
+                                 android:background="@color/white"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:text="home" android:layout_gravity="center"/>
+                </LinearLayout>
+                <LinearLayout android:layout_height="wrap_content" android:layout_width="wrap_content"
+                              android:orientation="vertical">
+                    <ImageButton android:src="@drawable/medical" android:layout_width="110dp"
+                                 android:layout_height="110dp" android:scaleType="fitXY"
+                                 android:layout_weight="1" android:onClick="selectType"
+                                 android:tag="5" android:layout_margin="3dp" android:id="@+id/btn5"
+                                 android:background="@color/white"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:text="medical" android:layout_gravity="center"/>
+                </LinearLayout>
+                <LinearLayout android:layout_height="wrap_content" android:layout_width="wrap_content"
+                              android:orientation="vertical">
+                    <ImageButton android:src="@drawable/pet" android:layout_width="110dp"
+                                 android:layout_height="110dp" android:scaleType="fitXY"
+                                 android:layout_weight="1" android:onClick="selectType"
+                                 android:tag="6"  android:layout_margin="3dp" android:id="@+id/btn6"
+                                 android:background="@color/white"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:text="pet" android:layout_gravity="center"/>
+                </LinearLayout>
+            </TableRow>
+            <TableRow android:gravity="center">
+                <LinearLayout android:layout_height="wrap_content" android:layout_width="wrap_content"
+                              android:orientation="vertical">
+                    <ImageButton android:src="@drawable/travel" android:layout_width="110dp"
+                                 android:layout_height="110dp" android:scaleType="fitXY"
+                                 android:layout_weight="1" android:onClick="selectType"
+                                 android:tag="7" android:layout_margin="3dp" android:id="@+id/btn7"
+                                 android:background="@color/white"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:text="travel" android:layout_gravity="center"/>
+                </LinearLayout>
+                <LinearLayout android:layout_height="wrap_content" android:layout_width="wrap_content"
+                              android:orientation="vertical">
+                    <ImageButton android:src="@drawable/shopping" android:layout_width="110dp"
+                                 android:layout_height="110dp" android:scaleType="fitXY"
+                                 android:layout_weight="1" android:onClick="selectType"
+                                 android:tag="8" android:layout_margin="3dp" android:id="@+id/btn8"
+                                 android:background="@color/white"
+                                 style="@android:style/Widget.DeviceDefault.ImageButton"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:text="shopping" android:layout_gravity="center"/>
+                </LinearLayout>
+                <LinearLayout android:layout_height="wrap_content" android:layout_width="wrap_content"
+                              android:orientation="vertical">
+                    <ImageButton android:src="@drawable/other" android:layout_width="110dp"
+                                 android:layout_height="110dp" android:scaleType="fitXY"
+                                 android:layout_weight="1" android:onClick="selectType"
+                                 android:tag="9"  android:layout_margin="3dp" android:id="@+id/btn9"
+                                 android:background="@color/white"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:text="other" android:layout_gravity="center"/>
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+        <Button android:layout_width="match_parent" android:layout_height="match_parent"
+                android:id="@+id/btn_add_task"
+                android:gravity="center"
+                android:onClick="createTask"
+            android:text="Add Task"/>
+    </LinearLayout>
+
+</ScrollView>
