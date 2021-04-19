@@ -64,14 +64,14 @@ class AddTaskActivity : AppCompatActivity() {
 
     fun showTimePicker(view: View) {
         val c = Calendar.getInstance()
-        val hour = c.get(Calendar.HOUR)
+        val hour = c.get(Calendar.HOUR_OF_DAY)
         val minute = c.get(Calendar.MINUTE)
         val dpd = TimePickerDialog(this, TimePickerDialog.OnTimeSetListener { view, hour, minute ->
 
             val prettyTime = Utils.toTimeString(hour, minute)
             binding.editTimePicker
                 .setText(prettyTime)
-            date.set(Calendar.HOUR, hour)
+            date.set(Calendar.HOUR_OF_DAY, hour)
             date.set(Calendar.MINUTE, minute)
 
         }, hour, minute, true)
@@ -89,6 +89,12 @@ class AddTaskActivity : AppCompatActivity() {
         intent.putExtra("task", task)
         setResult(RESULT_OK, intent)
         finish()
+    }
+
+    override fun onBackPressed() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        super.onBackPressed()
     }
 
 }

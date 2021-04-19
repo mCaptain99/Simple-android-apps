@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         db = AppDatabase.getInstance(this)!!
         taskDao = db.taskDao()
         taskList.addAll(taskDao.getAll())
+        sort()
         recyclerView = binding.taskList
         recyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -46,6 +47,7 @@ class MainActivity : AppCompatActivity() {
             val task: Task = data?.getSerializableExtra("task") as Task
             taskList.add(0, task)
             taskDao.insertAll(task)
+            sort()
             recyclerView.adapter?.notifyDataSetChanged()
         }
     }
