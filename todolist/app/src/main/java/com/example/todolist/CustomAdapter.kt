@@ -91,7 +91,7 @@ class CustomAdapter(private val data: MutableList<Task>, filter: String, val tas
     }
 
     fun deleteTask(index: Int) {
-        val task = data.get(index)
+        val task = data[index]
         data.removeAt(index)
         taskDao.delete(task)
         notifyDataSetChanged()

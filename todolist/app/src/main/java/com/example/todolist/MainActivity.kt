@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         db = AppDatabase.getInstance(this)!!
         taskDao = db.taskDao()
         taskList.addAll(taskDao.getAll())
-        sort()
         recyclerView = binding.taskList
         recyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -39,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         binding.btnShowOnlyTomorrow.setBackgroundResource(R.color.white)
         binding.btnShowOnlyToday.setBackgroundResource(R.color.white)
         binding.btnShowAll.setBackgroundResource(R.color.grey)
+        sort()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
